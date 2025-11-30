@@ -1,3 +1,5 @@
+# [root](../../index.md) > [solution](../../solution.md) > [roles](index.md) > storage
+
 # `storage`
 
 Represents object/blob storage for unstructured data (e.g., Azure Blob Storage,

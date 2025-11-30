@@ -1,3 +1,5 @@
+# [root](index.md) > layout
+
 # TRAIL Solution Structure
 
 This document defines how a TRAIL solution is laid out from the repository root

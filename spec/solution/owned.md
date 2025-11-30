@@ -1,3 +1,5 @@
+# [root](../index.md) > [solution](../solution.md) > owned
+
 # `owned <role> <name>`
 
 The `owned` block declares an application tier that the solution controls. Each

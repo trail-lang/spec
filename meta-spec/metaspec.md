@@ -1,17 +1,21 @@
 # TRAIL Meta-Spec  
+
+---
+**TRAIL Documentation Navigation**
+
+[Readme](../README.md) | [Versioning](../VERSIONING.md) | [Human Specs](../human-specs.md) | [Objectives](../objectives/index.md) | Meta-Spec | [Spec Index](../spec/index.md)
+---
 **Topology & Runtime Architecture Intent Language**  
 _Meta-specification for defining the TRAIL language and ecosystem_
 Traditional languages were optimized for human authors. TRAIL is optimized for:
-Architecture-level constructs originate inside `solution.trail`:
+Architecture-level constructs originate inside [`solution.trail`](../spec/solution.md):
 - `solution` — declares the system root.
 - `owned` — ties a role to an application folder the solution controls.
 - `dependency` — references external systems that remain outside ownership.
 - `connects` — captures communication intent between owned apps and dependencies.
 - `deploy` — records the target platform or provider per block.
 - Role keywords that may follow `owned` or `dependency`. The current set lives
-  in `spec/solution/roles/` and includes application tiers (`spa`, `api`,
-  `worker`, `desktop`, `mobile`) and infrastructure primitives (`rdbms`,
-  `nosql`, `queue`, `bus`, `storage`, `cache`, `kv`).
+  in [`spec/solution/roles/`](../spec/solution/roles/index.md) and includes application tiers ([`spa`](../spec/solution/roles/spa.md), [`api`](../spec/solution/roles/api.md), [`worker`](../spec/solution/roles/worker.md), [`desktop`](../spec/solution/roles/desktop.md), [`mobile`](../spec/solution/roles/mobile.md)) and infrastructure primitives ([`rdbms`](../spec/solution/roles/rdbms.md), [`nosql`](../spec/solution/roles/nosql.md), [`queue`](../spec/solution/roles/queue.md), [`bus`](../spec/solution/roles/bus.md), [`storage`](../spec/solution/roles/storage.md), [`cache`](../spec/solution/roles/cache.md), [`kv`](../spec/solution/roles/kv.md)).
 
 ### 2.1 AI-first
 AI is the primary producer and consumer. Human ergonomics are secondary.
@@ -31,8 +35,8 @@ TRAIL preserves the OO paradigm as its underlying semantic model.
 - properties
 Syntax and semantics describe system-level components and their relationships.
 Each `owned` declaration maps to a repository folder that contains
-`software.trail` plus concept `.trail` files, forming a deterministic
-interpretation order: `solution.trail` → `software.trail` → concept files.
+[`software.trail`](../spec/layout.md) plus concept `.trail` files, forming a deterministic
+interpretation order: [`solution.trail`](../spec/solution.md) → [`software.trail`](../spec/layout.md) → concept files.
 - encapsulation
 - contracts
 

@@ -1,3 +1,5 @@
+# [root](../../index.md) > [solution](../../solution.md) > [roles](index.md) > api
+
 # `api`
 
 Represents a service that exposes programmatic capabilities over HTTP, gRPC, or

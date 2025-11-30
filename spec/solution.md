@@ -1,11 +1,4 @@
-# `solution.trail` 
-
-The `solution.trail` file is the canonical entry point for a TRAIL workspace. It
-expresses the system-level topology: owned applications, external dependencies,
-communication intent, and high-level deployment guidance. Every repository must
-contain exactly one `solution.trail` at its root.
-
----
+# [root](index.md) > solution
 
 ## File Responsibilities
 
@@ -23,59 +16,28 @@ contain exactly one `solution.trail` at its root.
 
 ```
 solution <SolutionName>:
-    (owned|dependency) <role> <identifier>:
-        connects <targets>
-        deploy <provider>
+  owned <role> <identifier>:
+    connects <targets>
+    deploy <provider>
+
+  dependency <role> <identifier>:
+    connects <targets>
+    deploy <provider>
 ```
 
 - `solution` introduces the file and must be followed by a unique solution name.
-- `<role>` communicates whether the block is an owned application role (spa,
-  api, worker, etc.) or a dependency role (db, queue, service, etc.).
+- [owned](solution/owned.md) — declares an application tier the solution controls.
+- [dependency](solution/dependency.md) — declares an external resource the solution references.
+- [role](solution/roles/index.md) — describes the type of owned app or dependency (e.g. spa, api, db, queue).
 - `<identifier>` is the application folder name or dependency handle.
+- [connects](solution/connects.md) — lists other owned apps or dependencies referenced by name.
+- [deploy](solution/deploy.md) — specifies the target platform/provider for the application or dependency.
+- `targets` - An `<identifier>` of another owned/dependency app declared in this file.
 - Child statements are indented and refine the intent of the parent block.
-
-Role-specific details are defined in [`roles/index.md`](roles/index.md).
-
----
-
-## Owned Applications
-
-```
-owned spa orderwebsite:
-    connects orderapi
-    deploy azure
-```
-
-- `owned` indicates the solution is responsible for the lifecycle of the
-  application.
-- `<role>` is one of the supported application types (spa, api, worker, etc.).
-- `<appName>` must match the folder name that contains the application's
-  `.trail` files (e.g., `orderwebsite/`).
-- Nested statements:
-  - `connects` lists other owned apps or dependencies referenced by name.
-  - `deploy` specifies the target platform/provider for the application.
-
-Owned entries are declarative; they do not embed environment-specific DSLs.
+- New line between apps (owned/dependency).
 
 ---
 
-## Dependencies
-
-```
-dependency db ordersdb:
-    deploy azure
-```
-
-- `dependency` marks a resource that exists outside the solution's ownership.
-- `<role>` communicates the type of dependency (`db`, `queue`, `service`, etc.).
-- `<name>` is the identifier used by `connects` statements.
-- Nested statements (such as `deploy`) describe intent so tooling knows how to
-  provision or reference the dependency.
-
-Dependencies do not require corresponding folders because they are not owned by
-TRAIL. They remain references within the solution graph.
-
----
 
 ## Example File
 
@@ -87,17 +49,17 @@ solution CustomerOrderSystem:
 
   owned api orderapi:
     connects ordersdb confirmationqueue
-    deploy azure
+    deploy aws
 
   dependency db ordersdb:
     deploy azure
 
   dependency queue confirmationqueue:
-    deploy azure
+    deploy gcp
 
   owned worker emailworker:
     connects confirmationqueue
-    deploy azure
+    deploy gcp
 ```
 
 This example:

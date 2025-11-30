@@ -1,3 +1,5 @@
+# [root](../index.md) > [solution](../solution.md) > connects
+
 # `connects`
 
 The `connects` statement declares communication intent from the enclosing block

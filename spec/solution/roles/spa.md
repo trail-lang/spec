@@ -1,3 +1,5 @@
+# [root](../../index.md) > [solution](../../solution.md) > [roles](index.md) > spa
+
 # `spa`
 
 Represents a browser-delivered client experience such as a single-page

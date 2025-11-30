@@ -1,3 +1,5 @@
+# [root](../index.md) > [solution](../solution.md) > dependency
+
 # `dependency <role> <name>`
 
 Dependency blocks represent resources the solution does not own but must

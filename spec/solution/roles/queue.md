@@ -1,3 +1,5 @@
+# [root](../../index.md) > [solution](../../solution.md) > [roles](index.md) > queue
+
 # `queue`
 
 Represents a message queue that preserves ordering guarantees per-queue or

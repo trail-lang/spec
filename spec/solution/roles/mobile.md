@@ -1,3 +1,5 @@
+# [root](../../index.md) > [solution](../../solution.md) > [roles](index.md) > mobile
+
 # `mobile`
 
 Represents a native or hybrid mobile application (iOS, Android, cross-platform

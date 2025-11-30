@@ -1,5 +1,11 @@
 # Objectives Index
 
+---
+**TRAIL Documentation Navigation**
+
+[Readme](../README.md) | [Versioning](../VERSIONING.md) | [Human Specs](../human-specs.md) | Objectives | [Meta-Spec](../meta-spec/metaspec.md) | [Spec Index](../spec/index.md)
+---
+
 This folder defines the foundational intent behind the TRAIL language. Each document
 captures one dimension of the “why” and “for what purpose” TRAIL exists.
 

@@ -1,3 +1,5 @@
+# [root](../../index.md) > [solution](../../solution.md) > [roles](index.md) > worker
+
 # `worker`
 
 Represents long-running or event-driven processing units: background jobs,

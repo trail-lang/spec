@@ -1,3 +1,5 @@
+# [root](../../index.md) > [solution](../../solution.md) > [roles](index.md) > bus
+
 # `bus`
 
 Represents an event bus or pub/sub backbone (e.g., Kafka topics, Azure Event

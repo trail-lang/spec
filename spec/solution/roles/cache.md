@@ -1,3 +1,5 @@
+# [root](../../index.md) > [solution](../../solution.md) > [roles](index.md) > cache
+
 # `cache`
 
 Represents a distributed cache or in-memory data grid (e.g., Redis, Memcached).

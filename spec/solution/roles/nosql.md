@@ -1,3 +1,5 @@
+# [root](../../index.md) > [solution](../../solution.md) > [roles](index.md) > nosql
+
 # `nosql`
 
 Represents document, column-family, or graph databases that do not enforce a
