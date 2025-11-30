@@ -1,4 +1,4 @@
-# [root](../index.md) > [solution](../solution.md) > deploy
+### [root](../index.md) > [solution](../solution.md) > deploy
 
 # `deploy`
 

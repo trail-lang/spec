@@ -1,4 +1,4 @@
-# [root](index.md) > layout
+### [root](index.md) > layout
 
 # TRAIL Solution Structure
 

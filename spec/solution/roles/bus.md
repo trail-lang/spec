@@ -1,4 +1,4 @@
-# [root](../../index.md) > [solution](../../solution.md) > [roles](index.md) > bus
+### [root](../../index.md) > [solution](../../solution.md) > [roles](index.md) > bus
 
 # `bus`
 
